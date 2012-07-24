@@ -1,0 +1,136 @@
+/*----------------------------------------------------------
+Colors:
+#171717 - background
+#cecece - login, nav, footer
+#d84f00 - login a hover, selected, footer a hover
+#444444 - background nav hover
+#454545 - border nav hover
+#ffffff - color nav hover
+#303030 - shadow nav hover
+----------------------------------------------------------*/
+
+body {
+    margin :0;
+    padding: 0;
+    background-color: #171717;
+    min-width: 980px;
+    overflow: hidden;
+}
+
+#page {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#loginfo 
+{
+    display: block;
+    background:url('images/top.png') repeat-x;
+    height: 26px;
+}
+#loginfo span em {
+    float: left;
+    padding: 0 3px 0 3px;
+}
+#loginfo span {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 12px;
+    color: #cecece;
+    font-style: italic;
+    text-align: right;
+    padding-top: 4px;
+    margin-right: 30px;
+    float: right;
+}
+#loginfo span a {
+    float: left;
+    color: #cecece;
+    text-decoration: none;
+}
+#loginfo span a:hover {
+    color: #d84f00;
+}
+
+#bar {
+    height: 81px;
+}
+#bar a {float: left;}
+#bar img {border: 0;}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+#nav li {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 16px;
+    font-style: italic;
+    float: left;
+    margin-top: 30px;
+    display: block;
+    margin-right: 22px;
+}
+#nav li a {
+    text-decoration: none;
+    color: #cecece;
+    padding: 6px 6px 6px 6px;
+}
+#nav li a:hover {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #444444;
+	height: 20px;
+	padding: 5px 5px 5px 5px;	
+	border: 1px solid #454545;
+	color: #ffffff;
+	-moz-box-shadow: inset 0 0 5px #303030; 
+}
+#nav li.selected a {
+    color: #d84f00;
+}
+
+footer {
+    background: url('images/footer.png') repeat-x;
+    height: 70px;
+    padding-left: 30px;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 14px;
+    color: #cecece;
+    font-style: italic;
+}
+footer div a {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 14px;
+    color: #cecece;
+    font-style: italic;
+    text-decoration: none;
+}
+footer div a:hover {
+    cursor: pointer;
+    color: #d84f00;
+    text-decoration:none;
+}
+
+.left {
+    border: 0;
+    width: 89px;
+    height: 36px;
+    float: left;
+    padding-top: 20px;
+}
+.left img {
+    border: 0;
+    float: left;
+}
+.right {
+    width: 120px;
+    float: right;
+    padding-top: 25px;
+}
+.middle {
+    float: left;
+    padding: 25px 200px 0px 200px;
+}

@@ -1,5 +1,4 @@
-﻿@using WebIdeias.Helpers
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,7 +23,7 @@
                 {
                     @RenderSection("Nav")
                 } else {
-                    @Html.NavRender("")
+                    @Html.Partial("_Nav", "")
                 }
             </div>
         </header>

@@ -1,0 +1,16 @@
+﻿@{
+    var selected = @Model;
+    var home = selected.Equals("Home") ? "class=\"selected\"" : "";
+    var idea = selected.Equals("Idea") ? "class=\"selected\"" : "";
+    var user = selected.Equals("User") ? "class=\"selected\"" : "";
+    var category = selected.Equals("Category") ? " class=\"selected\"" : "";
+    var stats = selected.Equals("Stats") ? " class=\"selected\"" : "";
+}
+
+<ul id="nav">
+    <li @Html.Raw(home)><a href="/">início</a></li>
+    <li @Html.Raw(idea)><a href="/Idea">driving ideas</a></li>
+    <li @Html.Raw(user)><a href="/User">as minhas ideias</a></li>
+    <li @Html.Raw(category)><a href="/Category">categorias</a></li>
+    <li @Html.Raw(stats)><a href="/Stats">estatísticas</a></li>
+</ul>

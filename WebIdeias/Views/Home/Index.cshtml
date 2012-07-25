@@ -1,11 +1,10 @@
-﻿@using WebIdeias.Helpers
-@{
+﻿@{
     ViewBag.Title = "Início";
 }
 
 @section Nav
 {
-@Html.Raw(@Html.NavRender("Home"))
+@Html.Partial("_Nav", "Home")
 }
 <div id="tagline">
     <div class="centered">
@@ -18,46 +17,15 @@
 <div class="decoration"></div>
 <div id="destaque">
     <div class="centered">
-        <div id="categorias">
-            <ul>
-                <li><a href="@Url.Action("papel", "Category")">Papel</a>
-                <li><a href="@Url.Action("wc", "Category")">WC</a>
-                <li><a href="@Url.Action("secretarias", "Category")">Secretárias</a>
-                <li><a href="@Url.Action("cadeiras", "Category")">Cadeiras</a>
-                <li><a href="@Url.Action("portateis", "Category")">Portáteis</a>
-            </ul>
-        </div>
-        <div id="ultimas">
-            <a href="@Url.Action("energia", "Idea")">
-                <h1>Título da Ideia</h1>
-                <h2>Categoria: Consumo de Energia | 17 de Março 2012</h2>
-                <p>
-                    Lorem Ipsum cvenas e coiso
-                </p>
-                <h2>Submetida por: BB</h2>
-            </a>
-        </div>
+        @Html.Partial("_Categories")
+        <a id="ultimas" href="@Url.Action("energia", "Idea")">
+            <h1>Título da Ideia</h1>
+            <h2>Categoria: Consumo de Energia | 17 de Março 2012</h2>
+            <p>
+                Lorem Ipsum cvenas e coiso
+            </p>
+            <h2>Submetida por: BB</h2>
+        </a>
     </div>
 </div>
-<div id="tops" class="centered">
-    <div id="contribuidores">
-        <h1>Top 5 Contribuidores</h1>
-        <ol>
-            <li><a href="@Url.Action("barbara", "User")">Bárbara</a></li>
-            <li><a href="@Url.Action("cesar", "User")">César</a></li>
-            <li><a href="@Url.Action("rocha", "User")">Rocha</a></li>
-            <li><a href="@Url.Action("tiago", "User")">Tiago</a></li>
-            <li><a href="@Url.Action("artur", "User")">Artur</a></li>
-        </ol>
-    </div>
-    <div id="ideias">
-        <h1>Top 5 Ideias</h1>
-        <ol>
-            <li><a href="@Url.Action("papel", "Idea")">Papel</a></li>
-            <li><a href="@Url.Action("pinguim", "Idea")">Pinguim</a></li>
-            <li><a href="@Url.Action("optimizar", "Idea")">Optimizar</a></li>
-            <li><a href="@Url.Action("lorem", "Idea")">Lorem Ipsum cenas e coisas</a></li>
-            <li><a href="@Url.Action("ac", "Idea")">Ar Condicionado</a></li>
-        </ol>
-    </div>
-</div>
+@Html.Partial("_Tops")

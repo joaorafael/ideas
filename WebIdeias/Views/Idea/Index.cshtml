@@ -1,9 +1,8 @@
-﻿@using WebIdeias.Helpers
-@{
+﻿@{
     ViewBag.Title = "Idea";
 }
 
 @section Nav
 {
-@Html.Raw(@Html.NavRender("Idea"))
+@Html.Partial("_Nav", "Idea")
 }

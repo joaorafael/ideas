@@ -1,11 +1,10 @@
-﻿@using WebIdeias.Helpers
-@{
+﻿@{
     ViewBag.Title = "As minhas ideias";
 }
 
 @section Nav
 {
-@Html.Raw(@Html.NavRender("User"))
+@Html.Partial("_Nav", "User")
 }
 
 <h2>@ViewBag.Message</h2>

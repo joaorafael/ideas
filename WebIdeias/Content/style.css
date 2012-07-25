@@ -17,17 +17,22 @@ body {
     overflow: hidden;
 }
 
-#page {
+.centered {
     width: 980px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;    
 }
 
+#page {
+    margin: auto;
+}
+
+#top {
+    background:url('images/top.png') repeat-x;
+    height: 26px;
+}
 #loginfo 
 {
     display: block;
-    background:url('images/top.png') repeat-x;
-    height: 26px;
 }
 #loginfo span em {
     float: left;
@@ -92,6 +97,10 @@ body {
     color: #d84f00;
 }
 
+#main {
+    clear: both;
+}
+
 footer {
     background: url('images/footer.png') repeat-x;
     height: 70px;
@@ -133,4 +142,35 @@ footer div a:hover {
 .middle {
     float: left;
     padding: 25px 200px 0px 200px;
+}
+
+#tagline {
+    background: url('images/tagline.png') repeat-x;
+    height: 175px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#tagline img {
+    float: left;
+}
+#tagline .submeter {
+    background: url('images/glow.png') no-repeat;
+    height: 175px;
+    float: right;
+    width: 456px;
+}
+
+#tagline a {
+    width: 186px;
+    height: 52px;
+    background: url('images/submeterIdeia.png') no-repeat 0 0;
+}
+#tagline a :hover {
+    width: 186px;
+    height: 52px;
+    background: url('images/submeterIdeia.png') no-repeat 0 -52px;
+}
+.decoration {
+    background: url('images/decoration.png') repeat-x;
+    height: 20px;
 }

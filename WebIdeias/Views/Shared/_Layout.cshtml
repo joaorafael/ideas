@@ -10,16 +10,18 @@
 <body>
     <div id="page">
         <header>
-            <div id="loginfo">
-                @Html.Partial("_LogOnPartial")
+            <div id="top">
+                <div id="loginfo">
+                    @Html.Partial("_LogOnPartial")
+                </div>
             </div>
-            <div id="bar">
+            <div id="bar" class="centered">
                 <a href="@Url.Action("Index", "Home")">
                     <img src="@Url.Content("~/Content/images/logo.png")" alt="driving Ideas" title="driving Ideas" />
                 </a>
                 @if (IsSectionDefined("Nav"))
                 {
-                    RenderSection("Nav");
+                    @RenderSection("Nav")
                 } else {
                     <ul id="nav">
                         <li>@Html.ActionLink("início", "Index", "Home")</li>
@@ -33,20 +35,22 @@
             @RenderBody()
         </section>
         <footer>
-            <div class="left">
-                <a href="@Url.Action("Index", "Home")" target="_blank">
-                    <img src="@Url.Content("~/Content/images/logoarmis.png")" alt="www.armis.pt" title="www.armis.pt" />
-                </a>
+            <div id="bottom" class="centered">
+                <div class="left">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="@Url.Content("~/Content/images/logoarmis.png")" alt="www.armis.pt" title="www.armis.pt" />
+                    </a>
+                </div>
+                <div class="middle"> 
+                    @Html.ActionLink("início", "Index", "Home") <em>|</em>
+                    @Html.ActionLink("as minhas ideias", "Index", "User") <em>|</em>
+                    @Html.ActionLink("estatísticas", "Index", "Stats") 
+                </div>
+                <div class="right">
+                    @Html.ActionLink("sugestões", "Index", "User") <em>|</em>
+                    @Html.ActionLink("ajuda", "Help", "Account")
+                </div>
             </div>
-			<div class="middle"> 
-				@Html.ActionLink("início", "Index", "Home") <em>|</em>
-				@Html.ActionLink("as minhas ideias", "Index", "User") <em>|</em>
-				@Html.ActionLink("estatísticas", "Index", "Stats") 
-			</div>
-			<div class="right">
-                @Html.ActionLink("sugestões", "Index", "User") <em>|</em>
-				@Html.ActionLink("ajuda", "Help", "Account")
-			</div>
         </footer>
     </div>
 </body>

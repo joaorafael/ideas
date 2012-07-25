@@ -1,14 +1,11 @@
-﻿@{
+﻿@using WebIdeias.Helpers
+@{
     ViewBag.Title = "As minhas ideias";
 }
 
 @section Nav
 {
-<ul id="nav">
-    <li>@Html.ActionLink("início", "Index", "Home")</li>
-    <li class="selected">@Html.ActionLink("as minhas ideias", "Index", "User")</li>
-    <li>@Html.ActionLink("estatísticas", "Index", "Stats")</li>
-</ul>
+@Html.Raw(@Html.NavRender("User"))
 }
 
 <h2>@ViewBag.Message</h2>

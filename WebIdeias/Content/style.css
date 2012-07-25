@@ -14,7 +14,10 @@ body {
     padding: 0;
     background-color: #171717;
     min-width: 980px;
-    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 .centered {
@@ -102,6 +105,7 @@ body {
 }
 
 footer {
+    clear: both;
     background: url('images/footer.png') repeat-x;
     height: 70px;
     padding-left: 30px;
@@ -154,7 +158,7 @@ footer div a:hover {
     float: left;
 }
 #tagline .submeter {
-    background: url('images/glow.png') no-repeat;
+    background: transparent url('images/glow.png') no-repeat;
     height: 175px;
     float: right;
     width: 456px;
@@ -163,14 +167,144 @@ footer div a:hover {
 #tagline a {
     width: 186px;
     height: 52px;
-    background: url('images/submeterIdeia.png') no-repeat 0 0;
+    float: right;
+    margin: 90px 150px 0 0;
+    text-indent: -10000px;
+    background: transparent url('images/submeterIdeia.png') no-repeat 0 0;
 }
-#tagline a :hover {
+#tagline a:hover {
     width: 186px;
     height: 52px;
-    background: url('images/submeterIdeia.png') no-repeat 0 -52px;
+    float: right;
+    margin: 90px 150px 0 0;
+    text-indent: -10000px;
+    background: transparent url('images/submeterIdeia.png') no-repeat 0 -52px;
 }
+
 .decoration {
     background: url('images/decoration.png') repeat-x;
     height: 20px;
+}
+
+#destaque {
+    background: url('images/destaque.png') repeat-x;
+    height: 218px;
+}
+
+#categorias {
+    width: 360px;
+    float:left;
+}
+#categorias h1 {
+    margin: 43px 0 0 0;
+    padding: 0;
+    background: url('images/categorias.png') no-repeat;
+    height: 43px;
+}
+#categorias ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+#categorias li {
+	background-color: #eac99e;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+#categorias li:hover {
+    background-color: #ffffff;
+}
+#categorias li a {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 16px;
+    color: #ac6e18;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#ultimas {
+    background: url('images/paperplane.png') no-repeat top left;
+    height: 218px;
+    width: 600px;
+    float: right;
+}
+#ultimas h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+#ultimas h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 14px;
+    color: #7f4904;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+#ultimas p {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+#tops ol {
+	font-family: Georgia, Times New Roman, serif; 
+	font-size: 24px;
+	color: #d84f00;
+	font-weight: bold; 
+	font-style: italic;
+	margin: 0 0 10px 0;
+	list-style-type: decimal;
+	padding-left: 40px;
+}
+#tops li a {
+    background: url('images/bullet.png') no-repeat top left;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none;
+    padding-left: 40px;
+    font-weight: normal;
+}
+#tops li a:hover {
+    color: #d84f00;
+}
+
+#contribuidores {
+    float: left;
+    width: 460px;
+}
+#contribuidores h1 {
+    margin: 0;
+    padding: 0;
+    background: url('images/h1Contribuidores.png') no-repeat;
+    height: 61px;
+    text-indent: -10000px;
+}
+
+#ideias {
+    float: right;
+    width: 460px;
+}
+#ideias h1 {
+    margin: 0;
+    padding: 0;
+    background: url('images/h1Ideias.png') no-repeat;
+    height: 61px;
+    text-indent: -10000px;
 }

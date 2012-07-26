@@ -2,6 +2,7 @@ ideas
 =====
 
 > ideas is a web application that allows to manage office ideas.
+
 > This project was built learn more how to create an MVC application the best way possible
 
 Frameworks used

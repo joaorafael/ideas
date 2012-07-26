@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace WebIdeias.Tests
+namespace WebIdeas.Tests
 {
     public class StubRequest : HttpRequestBase
     {

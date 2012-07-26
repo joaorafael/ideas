@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
-using WebIdeias.Models;
+using WebIdeas.Models;
 
-namespace WebIdeias.Controllers
+namespace WebIdeas.Controllers
 {
     public class AccountController : Controller
     {

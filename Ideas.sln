@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeias", "WebIdeias\WebIdeias.csproj", "{923E62BD-3F12-457E-9D7C-2050F8A3B879}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeas", "WebIdeas\WebIdeas.csproj", "{923E62BD-3F12-457E-9D7C-2050F8A3B879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeias.Tests", "WebIdeias.Tests\WebIdeias.Tests.csproj", "{0F527A8C-CB13-4319-A7F0-5BA5993091C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeas.Tests", "WebIdeas.Tests\WebIdeas.Tests.csproj", "{0F527A8C-CB13-4319-A7F0-5BA5993091C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{1CE2C43F-9AF0-4BEB-82C5-A19DCC76ED14}"
 	ProjectSection(SolutionItems) = preProject

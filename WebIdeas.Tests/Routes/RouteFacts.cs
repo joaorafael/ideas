@@ -2,9 +2,9 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Xunit;
-using WebIdeias;
+using WebIdeas;
 
-namespace WebIdeias.Tests.Routes
+namespace WebIdeas.Tests.Routes
 {
     public class RouteFacts
     {

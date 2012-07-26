@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using Xunit;
-using WebIdeias.Controllers;
+using WebIdeas.Controllers;
 
-namespace WebIdeias.Tests.Controllers
+namespace WebIdeas.Tests.Controllers
 {
     public class HomeControllerFacts
     {

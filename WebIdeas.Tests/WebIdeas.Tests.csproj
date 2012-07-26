@@ -8,8 +8,8 @@
     <ProjectGuid>{0F527A8C-CB13-4319-A7F0-5BA5993091C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebIdeias.Tests</RootNamespace>
-    <AssemblyName>WebIdeias.Tests</AssemblyName>
+    <RootNamespace>WebIdeas.Tests</RootNamespace>
+    <AssemblyName>WebIdeas.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -58,9 +58,9 @@
     <None Include="3rdParty\xunit.runner.utility.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebIdeias\WebIdeias.csproj">
+    <ProjectReference Include="..\WebIdeas\WebIdeas.csproj">
       <Project>{923E62BD-3F12-457E-9D7C-2050F8A3B879}</Project>
-      <Name>WebIdeias</Name>
+      <Name>WebIdeas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

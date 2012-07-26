@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Início";
+}
+
+@section Nav
+{
+@Html.Partial("_Nav", "Home")
+}
+<div id="tagline">
+    <div class="centered">
+        <img src="@Url.Content("~/Content/images/tagInicio.png")" alt="Submete a tua ideia" title="Submete a tua ideia" />
+        <div class="submeter">
+            @Html.ActionLink("Submeter Ideia", "Index", "User")
+        </div>
+    </div>
+</div>
+<div class="decoration"></div>
+<div id="destaque">
+    <div class="centered">
+        @Html.Partial("_Categories")
+        <a id="ultimas" href="@Url.Action("energia", "Idea")">
+            <h1>Título da Ideia</h1>
+            <h2>Categoria: Consumo de Energia | 17 de Março 2012</h2>
+            <p>
+                Lorem Ipsum cvenas e coiso
+            </p>
+            <h2>Submetida por: BB</h2>
+        </a>
+    </div>
+</div>
+@Html.Partial("_Tops")

@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeias", "WebIdeias\WebIdeias.csproj", "{923E62BD-3F12-457E-9D7C-2050F8A3B879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeias.Tests", "WebIdeias.Tests\WebIdeias.Tests.csproj", "{0F527A8C-CB13-4319-A7F0-5BA5993091C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{1CE2C43F-9AF0-4BEB-82C5-A19DCC76ED14}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Archive.zip = Resources\Archive.zip
+		Resources\drivingideas.png = Resources\drivingideas.png
+		Resources\inicio.png = Resources\inicio.png
+		Resources\submeterIdeia.png = Resources\submeterIdeia.png
+		Resources\todasideias.png = Resources\todasideias.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{4678683C-91D7-4CF4-A26C-EE150A59C944}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\HTML\asminhasideias.html = Resources\HTML\asminhasideias.html
+		Resources\HTML\drivingideas.html = Resources\HTML\drivingideas.html
+		Resources\HTML\index.html = Resources\HTML\index.html
+		Resources\HTML\style.css = Resources\HTML\style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{BD0D8251-18EC-41D6-A048-42E35B257621}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\HTML\images\asminhasideias.png = Resources\HTML\images\asminhasideias.png
+		Resources\HTML\images\bgContent.png = Resources\HTML\images\bgContent.png
+		Resources\HTML\images\bgMenu.png = Resources\HTML\images\bgMenu.png
+		Resources\HTML\images\bullet.png = Resources\HTML\images\bullet.png
+		Resources\HTML\images\categorias.png = Resources\HTML\images\categorias.png
+		Resources\HTML\images\comofunciona.png = Resources\HTML\images\comofunciona.png
+		Resources\HTML\images\content.png = Resources\HTML\images\content.png
+		Resources\HTML\images\decoration.png = Resources\HTML\images\decoration.png
+		Resources\HTML\images\decorationContent.png = Resources\HTML\images\decorationContent.png
+		Resources\HTML\images\destaque.png = Resources\HTML\images\destaque.png
+		Resources\HTML\images\destaqueCafe.png = Resources\HTML\images\destaqueCafe.png
+		Resources\HTML\images\drivingIdeasContent.png = Resources\HTML\images\drivingIdeasContent.png
+		Resources\HTML\images\footer.png = Resources\HTML\images\footer.png
+		Resources\HTML\images\glow.png = Resources\HTML\images\glow.png
+		Resources\HTML\images\h1Contribuidores.png = Resources\HTML\images\h1Contribuidores.png
+		Resources\HTML\images\h1Ideias.png = Resources\HTML\images\h1Ideias.png
+		Resources\HTML\images\header.png = Resources\HTML\images\header.png
+		Resources\HTML\images\logo.png = Resources\HTML\images\logo.png
+		Resources\HTML\images\logoarmis.png = Resources\HTML\images\logoarmis.png
+		Resources\HTML\images\novaCategoria.png = Resources\HTML\images\novaCategoria.png
+		Resources\HTML\images\oquee.png = Resources\HTML\images\oquee.png
+		Resources\HTML\images\paperplane.png = Resources\HTML\images\paperplane.png
+		Resources\HTML\images\paperplane02.png = Resources\HTML\images\paperplane02.png
+		Resources\HTML\images\separador.png = Resources\HTML\images\separador.png
+		Resources\HTML\images\star.png = Resources\HTML\images\star.png
+		Resources\HTML\images\submeterIdeia.png = Resources\HTML\images\submeterIdeia.png
+		Resources\HTML\images\tagInicio.png = Resources\HTML\images\tagInicio.png
+		Resources\HTML\images\tagline.png = Resources\HTML\images\tagline.png
+		Resources\HTML\images\tagminhasIdeias.png = Resources\HTML\images\tagminhasIdeias.png
+		Resources\HTML\images\top.png = Resources\HTML\images\top.png
+		Resources\HTML\images\topCategorias.png = Resources\HTML\images\topCategorias.png
+		Resources\HTML\images\vertodas.png = Resources\HTML\images\vertodas.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{923E62BD-3F12-457E-9D7C-2050F8A3B879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923E62BD-3F12-457E-9D7C-2050F8A3B879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923E62BD-3F12-457E-9D7C-2050F8A3B879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923E62BD-3F12-457E-9D7C-2050F8A3B879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4678683C-91D7-4CF4-A26C-EE150A59C944} = {1CE2C43F-9AF0-4BEB-82C5-A19DCC76ED14}
+		{BD0D8251-18EC-41D6-A048-42E35B257621} = {4678683C-91D7-4CF4-A26C-EE150A59C944}
+	EndGlobalSection
+EndGlobal

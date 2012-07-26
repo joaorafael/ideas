@@ -1,0 +1,112 @@
+body {margin:0;padding:0;background-color:#171717;min-width:980px;overflow:hidden;}
+/* @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+    }*/
+.main {width:980px;margin-right:auto;margin-left:auto;}
+.top {background:url('images/top.png') repeat-x; height:26px;}
+.top span{font-family:Georgia, Times New Roman, serif; font-size:12px; color:#cecece;font-style:italic;text-align:right;padding-top:4px;margin-right:30px;float:right;}
+.top span a{color:#cecece; text-decoration:none;}
+.top span a:hover {color:#d84f00;}
+.header {background:url('header.png') repeat-x; height:81px;}
+.header a {float:left;}
+.header img {border:0;}
+.nav {margin:0;padding:0;list-style-type:none;float:right;}
+.nav li {font-family:Georgia, Times New Roman, serif; font-size:16px;color:#cecece;font-style:italic;float:left;margin-top:30px;display:block;margin-right:22px;}
+.nav li a {text-decoration:none;color:#cecece;padding:6px 6px 6px 6px;}
+.nav li a:hover {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#444444;
+	height:20px;
+	padding:5px 5px 5px 5px;	
+	border:1px solid #454545;
+	color:#ffffff;
+	box-shadow:inset 0 0 5px #303030;
+	-moz-box-shadow:inset 0 0 5px #303030; 
+}
+#select {font-family:Georgia, Times New Roman, serif; font-size:16px;color:#d84f00;}
+.tagline {background:url('images/tagline.png') repeat-x; height:175px;padding-left:20px;padding-right:20px;}
+.tagline img {float:left;}
+.glow {background:url('images/glow.png') no-repeat; height:175px;float:right;width:456px;text-align:center;}
+.glow button {background:transparent url('images/submeterIdeia.png') no-repeat 0 0; height:52px;width:186px;border:0;margin-top:90px;}
+.glow button:hover {background:transparent url('images/submeterIdeia.png') no-repeat 0 -52px; height:52px;width:186px;border:0;cursor:pointer;}
+.glow img {margin-top:20px;width:303px; height:230px;position:relative;left:50px;}
+.decoration{background:url('images/decoration.png') repeat-x; height:20px;}
+.decorationContent{background:url('images/decorationContent.png') repeat-x; height:20px;}
+.destaque {background:url('images/destaque.png') repeat-x; height:218px;}
+.categorias {width:360px;float:left;}
+.categorias h1 {margin:0;padding:0; background:url('images/categorias.png') no-repeat; height:43px;margin-top:10px;}
+.categorias ul {margin:0;padding:0;list-style-type:none;margin-top:10px;}
+.categorias li {
+	background-color:#eac99e;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	padding:5px 10px 5px 10px;
+	float:left;
+	margin-right:10px;
+	margin-top:10px;
+}
+.categorias li:hover {background-color:#ffffff;}
+.categorias li a {font-family:Georgia, Times New Roman, serif; font-size:16px;color:#ac6e18;font-style:italic;text-decoration:none;}
+.ultimas{background:url('images/paperplane.png') no-repeat top left; height:218px;width:600px;float:right;}
+.ultimas h1{margin:0;padding:0;font-family:Georgia, Times New Roman, serif; font-size:20px;color:#ffffff;font-weight:normal;margin-top:50px;padding-bottom:10px;}
+.ultimas h2{margin:0;padding:0;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#7f4904;font-weight:normal;padding-bottom:5px;}
+.ultimas p{margin:0;padding:0;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#ffffff;font-weight:normal;padding-bottom:5px;}
+.content {background:url('images/content.png') repeat-x; height:230px;}
+.topContribuidores {float:left; width:460px;}
+.topContribuidores h1 {margin:0;padding:0;background:url('images/h1Contribuidores.png') no-repeat;height:61px;}
+.content ol {
+	font-family:Georgia, Times New Roman, serif; 
+	font-size:24px;
+	color:#d84f00;
+	font-weight:bold; 
+	font-style:italic;
+	margin:0;
+	list-style-type:decimal;
+	padding-left:40px;
+}
+.content ul {margin:0;padding:0; list-style-type:none; line-height:27px;}
+.content ul li span {font-family:Georgia, Times New Roman, serif; font-size:14px;color:#c1c1c1;font-style:italic;}
+.content li a {background:url('images/bullet.png') no-repeat top left;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#ffffff;font-style:italic;text-decoration:none;padding-left:40px;font-weight:normal;}
+.content li a:hover {color:#d84f00;}
+.topIdeias {float:right;width:460px;}
+.topIdeias h1 {margin:0;padding:0;background:url('images/h1Ideias.png') no-repeat;height:61px;}
+.separador {background:url('images/separador.png') repeat-y;height:190px;width:2px;float:left;margin-top:25px;}
+.footer {background:url('images/footer.png') repeat-x; height:70px;padding-left:30px;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#cecece;font-style:italic;}
+.footer div a {font-family:Georgia, Times New Roman, serif; font-size:14px;color:#cecece;font-style:italic;text-decoration:none;}
+.left {border:0;width:89px; height:36px;float:left;padding-top:20px;}
+.left img {border:0;float:left;}
+.right {width:120px;float:right;padding-top:25px;}
+.middle {width:360px;float:left;padding:25px 200px 0px 200px;}
+.footer div a:hover {cursor:pointer;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#d84f00;font-style:italic;text-decoration:none;}
+
+.drivingIdeas{background:url('images/drivingIdeasContent.png') repeat;}
+.quem {background:url('images/bgContent.png') no-repeat top right;width:980px; height:417px;margin-left:auto;margin-right:auto;padding-bottom:20px;}
+.quem h1 {font-family:Georgia, Times New Roman, serif; font-size:30px;color:#ffffff;font-style:italic;font-weight:normal;margin:0;padding:0;text-shadow: 2px 2px 2px #131313;padding-top:20px;padding-bottom:10px;}
+.quem p {margin:0;padding:0;font-family:Georgia, Times New Roman, serif; font-size:14px;color:#ffffff;font-style:italic;font-weight:normal;padding-top:15px;}
+.quem ul {margin:0;padding:0;list-style-type:none;}
+.quem li {font-family:Georgia, Times New Roman, serif; font-size:14px;color:#ffffff;font-style:italic;font-weight:normal;padding-top:15px;}
+.quem a {background:url('images/vertodas.png') no-repeat 0px 0px;margin-top:10px;float:right;width:150px; height:35px;}
+.quem a:hover {background:url('images/vertodas.png') no-repeat 0px -35px; }
+
+.minhasIdeias {float:right;width:460px;}
+.minhasIdeias h1 {margin:0;padding:0;background:url('images/asminhasideias.png') no-repeat;height:61px;}
+.topCategorias {float:left; width:460px;}
+.topCategorias h1 {margin:0;padding:0;background:url('images/topCategorias.png') no-repeat;height:61px;}
+
+.destaque form {padding-top:10px;}
+.destaque form ul {margin:0; padding:0;list-style-type:none;margin-right:20px;}
+.destaque form li {font-family:Georgia, Times New Roman, serif; font-size:18px;color:#ffffff;font-style:italic;font-weight:normal;padding-top:10px;}
+.destaque form input {clear:both;border:1px solid #9f6724;height:20px;width:350px;padding:1px;font-family:Georgia, Times New Roman, serif; font-size:12px;color:#454545;}
+.destaque form select {margin:0;border:1px solid #9f6724;height:22px;padding:1px;width:200px;font-family:Georgia, Times New Roman, serif; font-size:12px;color:#454545;float:left;}
+.destaque form textarea {border:1px solid #9f6724;height:105px;width:350px;padding:1px;font-family:Georgia, Times New Roman, serif; font-size:12px;color:#454545;}
+.destaque form a {background:url('images/novaCategoria.png') no-repeat 0px 0px;width:120px; height:25px;float:right;margin-right:30px;}
+.destaque form a:hover {background:url('images/novaCategoria.png') no-repeat 0px -25px; }
+.formRight {float:left;width:360px;}
+.formLeft {float:left;}
+.goButton button {background:transparent url('images/submeterIdeia.png') no-repeat 0 0; height:52px;width:186px;border:0;margin-top:135px;}
+.goButton button:hover {background:transparent url('images/submeterIdeia.png') no-repeat 0 -52px; height:52px;width:186px;border:0;cursor:pointer;}
+.paperplane {background:url('images/paperplane02.png') no-repeat top right;width:980px;margin-left:auto;margin-right:auto;height:218px;}

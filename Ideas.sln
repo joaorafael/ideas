@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		Resources\Archive.zip = Resources\Archive.zip
 		Resources\drivingideas.png = Resources\drivingideas.png
 		Resources\inicio.png = Resources\inicio.png
+		README.md = README.md
 		Resources\submeterIdeia.png = Resources\submeterIdeia.png
 		Resources\todasideias.png = Resources\todasideias.png
 	EndProjectSection

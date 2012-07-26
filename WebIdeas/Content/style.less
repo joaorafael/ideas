@@ -1,19 +1,32 @@
-/*----------------------------------------------------------
-Colors:
-#171717 - background
-#cecece - login, nav, footer
-#d84f00 - login a hover, selected, footer a hover
-#444444 - background nav hover
-#454545 - border nav hover
-#ffffff - color nav hover
-#303030 - shadow nav hover
-----------------------------------------------------------*/
+@font: Georgia, Times New Roman, serif;
+@columnWidth: 460px;
+@width: 980px;
+
+@bgColor: #171717;
+@color: #cecece;
+@colorAlternate: #d84f00;
+
+@navBgColor: #444444;
+@navBorderColor: #454545;
+@navColor: #ffffff;
+@navShadowColor: #303030;
+
+@catBgColor: #eac99e;
+@catBgHoverColor: #ffffff;
+@catColor: #ac6e18;
+
+@ultimasH1Color: #ffffff;
+@ultimasH2Color: #7f4904;
+@ultimasColor: #ffffff;
+
+@topsColor: #d84f00;
+@topsAColor: #ffffff;
 
 body {
     margin :0;
     padding: 0;
-    background-color: #171717;
-    min-width: 980px;
+    background-color: @bgColor;
+    min-width: @width;
 }
 
 a {
@@ -21,7 +34,7 @@ a {
 }
 
 .centered {
-    width: 980px;
+    width: @width;
     margin: auto;    
 }
 
@@ -42,9 +55,9 @@ a {
     padding: 0 3px 0 3px;
 }
 #loginfo span {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 12px;
-    color: #cecece;
+    color: @color;
     font-style: italic;
     text-align: right;
     padding-top: 4px;
@@ -53,11 +66,11 @@ a {
 }
 #loginfo span a {
     float: left;
-    color: #cecece;
+    color: @color;
     text-decoration: none;
 }
 #loginfo span a:hover {
-    color: #d84f00;
+    color: @colorAlternate;
 }
 
 #bar {
@@ -73,7 +86,7 @@ a {
     float: right;
 }
 #nav li {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 16px;
     font-style: italic;
     float: left;
@@ -83,21 +96,21 @@ a {
 }
 #nav li a {
     text-decoration: none;
-    color: #cecece;
+    color: @color;
     padding: 6px 6px 6px 6px;
 }
 #nav li a:hover {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	background-color: #444444;
+	background-color: @navBgColor;
 	height: 20px;
 	padding: 5px 5px 5px 5px;	
-	border: 1px solid #454545;
-	color: #ffffff;
-	-moz-box-shadow: inset 0 0 5px #303030; 
+	border: 1px solid @navBorderColor;
+	color: @navColor;
+	-moz-box-shadow: inset 0 0 5px @navShadowColor;
 }
 #nav li.selected a {
-    color: #d84f00;
+    color: @colorAlternate;
 }
 
 #main {
@@ -109,21 +122,21 @@ footer {
     background: url('images/footer.png') repeat-x;
     height: 70px;
     padding-left: 30px;
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 14px;
-    color: #cecece;
+    color: @color;
     font-style: italic;
 }
 footer div a {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 14px;
-    color: #cecece;
+    color: @color;
     font-style: italic;
     text-decoration: none;
 }
 footer div a:hover {
     cursor: pointer;
-    color: #d84f00;
+    color: @colorAlternate;
     text-decoration:none;
 }
 
@@ -193,7 +206,7 @@ footer div a:hover {
 
 #categorias {
     width: 360px;
-    float:left;
+    float: left;
 }
 #categorias h1 {
     margin: 43px 0 0 0;
@@ -207,7 +220,7 @@ footer div a:hover {
     list-style-type: none;
 }
 #categorias li {
-	background-color: #eac99e;
+	background-color: @catBgColor;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	padding: 5px 10px 5px 10px;
@@ -216,12 +229,12 @@ footer div a:hover {
 	margin-top: 10px;
 }
 #categorias li:hover {
-    background-color: #ffffff;
+    background-color: @catBgHoverColor;
 }
 #categorias li a {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 16px;
-    color: #ac6e18;
+    color: @catColor;
     font-style: italic;
     text-decoration: none;
 }
@@ -235,9 +248,9 @@ footer div a:hover {
 #ultimas h1 {
     margin: 0;
     padding: 0;
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 20px;
-    color: #ffffff;
+    color: @ultimasH1Color;
     font-weight: normal;
     margin-top: 50px;
     padding-bottom: 10px;
@@ -245,26 +258,26 @@ footer div a:hover {
 #ultimas h2 {
     margin: 0;
     padding: 0;
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 14px;
-    color: #7f4904;
+    color: @ultimasH2Color;
     font-weight: normal;
     padding-bottom: 5px;
 }
 #ultimas p {
     margin: 0;
     padding: 0;
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 14px;
-    color: #ffffff;
+    color: @ultimasColor;
     font-weight: normal;
     padding-bottom: 5px;
 }
 
 #tops ol {
-	font-family: Georgia, Times New Roman, serif; 
+    font-family: @font; 
 	font-size: 24px;
-	color: #d84f00;
+	color: @topsColor;
 	font-weight: bold; 
 	font-style: italic;
 	margin: 0 0 10px 0;
@@ -273,21 +286,21 @@ footer div a:hover {
 }
 #tops li a {
     background: url('images/bullet.png') no-repeat top left;
-    font-family: Georgia, Times New Roman, serif;
+    font-family: @font;
     font-size: 14px;
-    color: #ffffff;
+    color: @topsAColor;
     font-style: italic;
     text-decoration: none;
     padding-left: 40px;
     font-weight: normal;
 }
 #tops li a:hover {
-    color: #d84f00;
+    color: @colorAlternate;
 }
 
 #contribuidores {
     float: left;
-    width: 460px;
+    width: @columnWidth;
 }
 #contribuidores h1 {
     margin: 0;
@@ -299,7 +312,7 @@ footer div a:hover {
 
 #ideias {
     float: right;
-    width: 460px;
+    width: @columnWidth;
 }
 #ideias h1 {
     margin: 0;

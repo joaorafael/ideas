@@ -100,14 +100,18 @@ a {
     padding: 6px 6px 6px 6px;
 }
 #nav li a:hover {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	background-color: @navBgColor;
 	height: 20px;
 	padding: 5px 5px 5px 5px;	
 	border: 1px solid @navBorderColor;
 	color: @navColor;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
 	-moz-box-shadow: inset 0 0 5px @navShadowColor;
+    -webkit-box-shadow: inset 0 0 5px @navShadowColor;
+    box-shadow: inset 0 0 5px @navShadowColor;		
 }
 #nav li.selected a {
     color: @colorAlternate;
@@ -221,8 +225,9 @@ footer div a:hover {
 }
 #categorias li {
 	background-color: @catBgColor;
-	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	padding: 5px 10px 5px 10px;
 	float: left;
 	margin-right: 10px;

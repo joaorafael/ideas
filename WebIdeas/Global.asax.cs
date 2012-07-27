@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
+using WebIdeas.Infrastructure;
 
 namespace WebIdeas
 {
@@ -12,6 +9,7 @@ namespace WebIdeas
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static NHibernateHelper Store;
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -35,6 +33,8 @@ namespace WebIdeas
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            Store = new NHibernateHelper(@"Server=.\SQLExpress;Database=master;Trusted_Connection=True;");
         }
     }
 }

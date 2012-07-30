@@ -34,7 +34,7 @@ namespace WebIdeas
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
-            Store = new NHibernateHelper(@"Server=.\SQLExpress;Database=master;Trusted_Connection=True;");
+            IoC.Initialize();
         }
     }
 }

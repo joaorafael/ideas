@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
-using WebIdeas.Infrastructure;
+using NHibernate.Linq;
+using System.Linq;
 using WebIdeas.Models;
 
 namespace WebIdeas.Controllers
@@ -10,10 +11,8 @@ namespace WebIdeas.Controllers
         {
             ViewBag.Message = "ViewBag.Message - Home";
 
-            //var tag = new Tag {Name = "manel"};
-            //UnitOfWork.Session.Save(tag);
-
-            return View();
+            var tags = (from tag in UnitOfWork.Session.Query<Tag>() select tag).ToList();
+            return View(new HomeIndexViewModel(tags));
         }
     }
 }

@@ -11,16 +11,26 @@ namespace WebIdeas.Infrastructure
     public class NHibernateHelper
     {
         private readonly string _connectionString;
-        private ISessionFactory _sessionFactory;
+        private readonly ISessionFactory _sessionFactory;
 
         public ISessionFactory SessionFactory
         {
-            get { return _sessionFactory ?? (_sessionFactory = CreateSessionFactory()); }
+            get {
+                return _sessionFactory;
+            }
         }
 
-        public NHibernateHelper(string connectionString)
+        public NHibernateHelper(string connectionString, Boolean createDb)
         {
             _connectionString = connectionString;
+            if (createDb)
+            {
+                _sessionFactory = CreateSessionFactoryNew();
+            } else
+            {
+                if (_sessionFactory == null)
+                    _sessionFactory = CreateSessionFactory();
+            }
         }
 
         private ISessionFactory CreateSessionFactory()
@@ -28,9 +38,18 @@ namespace WebIdeas.Infrastructure
             return Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString).ShowSql())
                 .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
-                //.ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true)) // creates schema
                 .BuildSessionFactory();
         }
+
+        private ISessionFactory CreateSessionFactoryNew()
+        {
+            return Fluently.Configure()
+                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString).ShowSql())
+                .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
+                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true)) // creates schema
+                .BuildSessionFactory();
+        }
+
     }
 
     public interface IUnitOfWork : IDisposable

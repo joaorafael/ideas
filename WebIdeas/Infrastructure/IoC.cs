@@ -6,7 +6,7 @@ namespace WebIdeas.Infrastructure
 {
     public static class IoC
     {
-        private static readonly NHibernateHelper Nhelper = new NHibernateHelper(@"Server=.\SQLExpress;Database=master;Trusted_Connection=True;", false);
+        private static readonly NHibernateHelper Nhelper = new NHibernateHelper(Settings.SqlConnectionStringMaster, false);
         public static IContainer Initialize()
         {
             

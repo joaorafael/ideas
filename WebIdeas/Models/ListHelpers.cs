@@ -11,6 +11,9 @@ namespace WebIdeas.Models
                 if (otherList != null)
                 {
                     return false;
+                } else
+                {
+                    return true;
                 }
             }
             else

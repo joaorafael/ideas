@@ -1,0 +1,2 @@
+- UnitOfWork não pode ser null ao nivel do controller
+  (Se não for passado estoura)

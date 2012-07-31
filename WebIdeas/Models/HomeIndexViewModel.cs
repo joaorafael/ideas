@@ -2,10 +2,12 @@ using System.Collections.Generic;
 
 namespace WebIdeas.Models
 {
-    public class HomeIndexViewModel : ITags
+    public class HomeIndexViewModel : ITags, IContributers, IIdeas, ILastIdea
     {
         public List<Tag> Tags { get; set; }
         public List<Contributer> Contributers { get; set; }
+        public List<Idea> Ideas { get; set; }
+        public Idea LastIdea { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -28,7 +30,15 @@ namespace WebIdeas.Models
             {
                 return false;
             }
-            return true;
+            if (!ListHelpers.TestEqualList<Idea>(Ideas, other.Ideas))
+            {
+                return false;
+            }
+            if (LastIdea == null)
+            {
+                return other.LastIdea == null;
+            }
+            return LastIdea.Equals(other.LastIdea);
         }
 
         public override int GetHashCode()

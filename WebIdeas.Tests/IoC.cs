@@ -7,7 +7,7 @@ namespace WebIdeas.Tests
 {
     public static class IoC
     {
-        private static readonly NHibernateHelper Nhelper = new NHibernateHelper(@"Server=.\SQLExpress;Database=test;Trusted_Connection=True;", true);
+        private static readonly NHibernateHelper Nhelper = new NHibernateHelper(Settings.SqlConnectionStringTests, true);
         public static IContainer Initialize()
         {
             

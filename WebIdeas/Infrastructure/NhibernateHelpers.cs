@@ -36,7 +36,7 @@ namespace WebIdeas.Infrastructure
         private ISessionFactory CreateSessionFactory()
         {
             return Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString).ShowSql())
+                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString)) //.ShowSql())
                 .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
                 .BuildSessionFactory();
         }
@@ -44,9 +44,9 @@ namespace WebIdeas.Infrastructure
         private ISessionFactory CreateSessionFactoryNew()
         {
             return Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString).ShowSql())
+                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString)) //.ShowSql())
                 .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
-                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true)) // creates schema
+                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, true)) // creates schema
                 .BuildSessionFactory();
         }
 

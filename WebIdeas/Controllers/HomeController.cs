@@ -12,7 +12,7 @@ namespace WebIdeas.Controllers
             ViewBag.Message = "ViewBag.Message - Home";
 
             var tags = (from tag in UnitOfWork.Session.Query<Tag>() select tag).ToList();
-            return View(new HomeIndexViewModel(tags));
+            return View(new HomeIndexViewModel{Tags = tags});
         }
     }
 }

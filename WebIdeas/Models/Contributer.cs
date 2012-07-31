@@ -1,11 +1,11 @@
-﻿namespace WebIdeas.Models
+namespace WebIdeas.Models
 {
-    public class Tag
+    public class Contributer
     {
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
 
-        public virtual bool Equals(Tag other)
+        public virtual bool Equals(Contributer other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -16,8 +16,8 @@
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != typeof (Tag)) return false;
-            return Equals((Tag) obj);
+            if (obj.GetType() != typeof (Contributer)) return false;
+            return Equals((Contributer) obj);
         }
 
         public override int GetHashCode()

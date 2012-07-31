@@ -28,7 +28,7 @@ namespace WebIdeas.Tests.Controllers
             }
 
             [Fact]
-            public void SetsViewDataWithModel()
+            public void SetsViewModel_HasCategories()
             {
                 // Arrange
                 IoC.Initialize();
@@ -55,12 +55,58 @@ namespace WebIdeas.Tests.Controllers
                                              new Tag {Id = 4, Name = "Cadeiras"},
                                              new Tag {Id = 5, Name = "Portáteis"}
                                          };
-                    var vm = new HomeIndexViewModel(tags);
+                    var vm = new HomeIndexViewModel{Tags = tags};
 
                     Assert.Equal("ViewBag.Message - Home", viewResult.ViewBag.Message);
                     Assert.Equal(vm, viewResult.Model);
                 }
+            }
 
+            [Fact]
+            public void SetsViewModel_HasTopContributers()
+            {
+                // Arrange
+                IoC.Initialize();
+                using (var unitOfWork = new UnitOfWork(ObjectFactory.GetInstance<ISessionFactory>()))
+                {
+                    CreateTopContributers(unitOfWork);
+                }
+
+                using (var unitOfWork = new UnitOfWork(ObjectFactory.GetInstance<ISessionFactory>()))
+                {
+                    var controller = new HomeController { UnitOfWork = unitOfWork };
+
+                    // Act
+                    var result = controller.Index();
+
+                    // Assert
+                    Assert.IsType<ViewResult>(result);
+                    var viewResult = (ViewResult)result;
+                    var contributers = new List<Contributer>
+                                         {
+                                             new Contributer {Name = "Barbara"},
+                                             new Contributer {Name = "César"},
+                                             new Contributer {Name = "Rocha"},
+                                             new Contributer {Name = "Tiago"},
+                                         };
+                    var vm = new HomeIndexViewModel{Contributers = contributers};
+
+                    Assert.Equal("ViewBag.Message - Home", viewResult.ViewBag.Message);
+                    Assert.Equal(vm, viewResult.Model);
+                }
+            }
+
+            private void CreateTopContributers(UnitOfWork unitOfWork)
+            {
+                var contributer1 = new Contributer { Name = "Barbara" };
+                var contributer2 = new Contributer { Name = "César" };
+                var contributer3 = new Contributer { Name = "Rocha" };
+                var contributer4 = new Contributer { Name = "Tiago" };
+                unitOfWork.Session.Save(contributer1);
+                unitOfWork.Session.Save(contributer2);
+                unitOfWork.Session.Save(contributer3);
+                unitOfWork.Session.Save(contributer4);
+                unitOfWork.Commit();
             }
 
             private static void CreateTags(UnitOfWork unitOfWork)

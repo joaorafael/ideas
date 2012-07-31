@@ -85,8 +85,12 @@
     </Compile>
     <Compile Include="Infrastructure\IoC.cs" />
     <Compile Include="Infrastructure\NhibernateHelpers.cs" />
+    <Compile Include="Maps\ContributerMap.cs" />
     <Compile Include="Maps\TagMap.cs" />
+    <Compile Include="Models\Contributer.cs" />
+    <Compile Include="Models\IContributers.cs" />
     <Compile Include="Models\HomeIndexViewModel.cs" />
+    <Compile Include="Models\ListHelpers.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\ITags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

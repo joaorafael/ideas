@@ -7,7 +7,7 @@ namespace WebIdeas.Tests.Models
     public class HomeIndexViewModelFacts
     {
         [Fact]
-        public void TestEqual()
+        public void TestEqualTags()
         {
             var tags1 = new List<Tag>
                             {
@@ -21,8 +21,29 @@ namespace WebIdeas.Tests.Models
                                 new Tag {Name = "def"}
                             };
 
-            var model1 = new HomeIndexViewModel(tags1);
-            var model2 = new HomeIndexViewModel(tags2);
+            var model1 = new HomeIndexViewModel {Tags = tags1};
+            var model2 = new HomeIndexViewModel {Tags = tags2 };
+
+            Assert.Equal(model1, model2);
+        }
+
+        [Fact]
+        public void TestEqualContributers()
+        {
+            var contributers1= new List<Contributer>
+                            {
+                                new Contributer {Name = "abc"}, 
+                                new Contributer {Name = "def"}
+                            };
+
+            var contributers2 = new List<Contributer>
+                            {
+                                new Contributer {Name = "abc"}, 
+                                new Contributer {Name = "def"}
+                            };
+
+            var model1 = new HomeIndexViewModel { Contributers = contributers1 };
+            var model2 = new HomeIndexViewModel { Contributers = contributers2 };
 
             Assert.Equal(model1, model2);
         }

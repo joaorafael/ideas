@@ -4,12 +4,8 @@ namespace WebIdeas.Models
 {
     public class HomeIndexViewModel : ITags
     {
-        public List<Tag> Tags { get; private set; }
-
-        public HomeIndexViewModel(List<Tag> tags)
-        {
-            Tags = tags;
-        }
+        public List<Tag> Tags { get; set; }
+        public List<Contributer> Contributers { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -23,20 +19,16 @@ namespace WebIdeas.Models
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            if (other.Tags.Count == Tags.Count)
-            {
-                for (var i = 0; i<other.Tags.Count; i++)
-                {
-                    Tag otherTag = other.Tags[i];
-                    Tag thisTag = Tags[i];
 
-                    if (!(otherTag.Id.Equals(thisTag.Id) &&
-                        otherTag.Name.Equals(thisTag.Name)))
-                        return false;
-                }
-                return true;
+            if (!ListHelpers.TestEqualList<Tag>(Tags, other.Tags))
+            {
+                return false;
             }
-            return false;
+            if (!ListHelpers.TestEqualList<Contributer>(Contributers, other.Contributers))
+            {
+                return false;
+            }
+            return true;
         }
 
         public override int GetHashCode()

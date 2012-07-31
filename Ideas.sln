@@ -59,6 +59,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{BD0D82
 		Resources\HTML\images\vertodas.png = Resources\HTML\images\vertodas.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIdeas.Migrations", "WebIdeas.Migrations\WebIdeas.Migrations.csproj", "{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F527A8C-CB13-4319-A7F0-5BA5993091C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

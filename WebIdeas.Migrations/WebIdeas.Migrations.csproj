@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BCA91ED-652B-4F93-9F9D-4F1331B378BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebIdeas.Migrations</RootNamespace>
+    <AssemblyName>WebIdeas.Migrations</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Migrator.Framework, Version=0.9.0.26940, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>migratordotnet-0.8.0\lib\Migrator.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBMigration.cs" />
+    <Compile Include="migratordotnet-0.8.0\doc\example\migrations\001_AddAddressTable.cs" />
+    <Compile Include="migratordotnet-0.8.0\doc\example\migrations\002_AddAddressColumns.cs" />
+    <Compile Include="migratordotnet-0.8.0\doc\example\migrations\003_AddPersonTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="migratordotnet-0.8.0\doc\CHANGES.txt" />
+    <Content Include="migratordotnet-0.8.0\doc\example\migrations\migrations.dll" />
+    <Content Include="migratordotnet-0.8.0\doc\extras\VS.NET Template\README.txt" />
+    <Content Include="migratordotnet-0.8.0\doc\README.txt" />
+    <Content Include="migratordotnet-0.8.0\doc\TODO.txt" />
+    <Content Include="migratordotnet-0.8.0\lib\log4net.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Console.exe" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Console.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Framework.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Framework.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.MSBuild.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.MSBuild.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.NAnt.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.NAnt.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Providers.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Providers.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Tests.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Migrator.Tests.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\Mono.Security.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\MyMigrations.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\MyMigrations.pdb" />
+    <Content Include="migratordotnet-0.8.0\lib\MySql.Data.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\NAnt.Core.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Npgsql.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\nunit.framework.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\nunit.mocks.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\Oracle.DataAccess.dll" />
+    <Content Include="migratordotnet-0.8.0\lib\System.Data.SQLite.DLL" />
+    <Content Include="migratordotnet-0.8.0\lib\System.Data.SqlServerCe.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build.proj" />
+    <None Include="migratordotnet-0.8.0\doc\example\example-msbuild.proj" />
+    <None Include="migratordotnet-0.8.0\doc\example\example-nant.build" />
+    <None Include="migratordotnet-0.8.0\doc\extras\VS.NET Template\Migration.zip" />
+    <None Include="migratordotnet-0.8.0\lib\Migrator.Targets" />
+    <None Include="migratordotnet-0.8.0\lib\Migrator.Tests.dll.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

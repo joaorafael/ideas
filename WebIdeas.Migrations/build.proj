@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<MigratorTasksPath>$(MSBuildProjectDirectory)</MigratorTasksPath>
+	</PropertyGroup>
+    
+	<Import Project="WebIdeas.Migrations.csproj" />
+
+	<UsingTask AssemblyFile="$(MSBuildProjectDirectory)\migratordotnet-0.8.0\lib\Migrator.MSBuild.dll" TaskName="Migrator.MSBuild.Migrate"/>
+
+	<Target Name="Migrate" DependsOnTargets="Build">
+		<Migrate Provider="SqlServer"
+			Connectionstring="Server=.\SQLExpress;Database=master;Trusted_Connection=True;"
+			Migrations="bin/Debug/WebIdeas.Migrations.dll"/>
+	</Target>
+</Project>

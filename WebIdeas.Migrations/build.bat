@@ -1,0 +1,1 @@
+MSBuild build.proj /t:Migrate

@@ -2,7 +2,7 @@
 
 namespace WebIdeas.Controllers
 {
-    public class StatsController : Controller
+    public class StatsController : BaseController
     {
         public ActionResult Index()
         {

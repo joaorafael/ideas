@@ -2,7 +2,7 @@
 
 namespace WebIdeas.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoryController : BaseController
     {
         public ActionResult Index()
         {

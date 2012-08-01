@@ -2,11 +2,11 @@
 
 namespace WebIdeas.Controllers
 {
-    public class IdeaController : BaseController
+    public class HelpController : BaseController
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "ViewBag.Message - Idea";
+            ViewBag.Message = "ViewBag.Message - Help";
 
             return View();
         }

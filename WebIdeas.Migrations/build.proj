@@ -9,8 +9,12 @@
 	<UsingTask AssemblyFile="$(MSBuildProjectDirectory)\migratordotnet-0.8.0\lib\Migrator.MSBuild.dll" TaskName="Migrator.MSBuild.Migrate"/>
 
 	<Target Name="Migrate" DependsOnTargets="Build">
+    <CreateProperty Value="-1"  Condition="'$(SchemaVersion)'==''">
+      <Output TaskParameter="Value" PropertyName="SchemaVersion"/>
+    </CreateProperty>
 		<Migrate Provider="SqlServer"
 			Connectionstring="Server=.\SQLExpress;Database=master;Trusted_Connection=True;"
-			Migrations="bin/Debug/WebIdeas.Migrations.dll"/>
+			Migrations="bin/Debug/WebIdeas.Migrations.dll"
+      To="$(SchemaVersion)"/>
 	</Target>
 </Project>

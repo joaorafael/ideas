@@ -45,7 +45,7 @@ namespace WebIdeas.Migrations
         }
     }
 
-    [Migration(201207311725)]
+    [Migration(201207311226)]
     public class CreateContributerTable_003 : Migration
     {
         public override void Up()
@@ -55,7 +55,7 @@ namespace WebIdeas.Migrations
                    Id INT IDENTITY NOT NULL,
                    Name NVARCHAR(255) null,
                    primary key (Id)
-                )");
+                );");
         }
 
         public override void Down()
@@ -64,7 +64,7 @@ namespace WebIdeas.Migrations
         }
     }
 
-    [Migration(201207311226)]
+    [Migration(201207311725)]
     public class InsertInitialContributerRecords_004 : Migration
     {
         public override void Up()
@@ -77,10 +77,10 @@ namespace WebIdeas.Migrations
 
         public override void Down()
         {
-            Database.Delete("Contributer", "Name", "Bárbara");
-            Database.Delete("Contributer", "Name", "César");
-            Database.Delete("Contributer", "Name", "Rocha");
-            Database.Delete("Contributer", "Name", "Virgínio");
+            Database.ExecuteNonQuery(@"delete Contributer where Name = 'Bárbara';");
+            Database.ExecuteNonQuery(@"delete Contributer where Name = 'César';");
+            Database.ExecuteNonQuery(@"delete Contributer where Name = 'Rocha';");
+            Database.ExecuteNonQuery(@"delete Contributer where Name = 'Virgínio';");
         }
     }
 
@@ -134,7 +134,24 @@ namespace WebIdeas.Migrations
 
         public override void Down()
         {
-            Database.ExecuteNonQuery(@"alter table [Idea] drop column Date;");
+            Database.ExecuteNonQuery(
+                @"declare @default sysname, @sql nvarchar(max)
+
+                select @default = name 
+                from sys.default_constraints 
+                where parent_object_id = object_id('Idea')
+                AND type = 'D'
+                AND parent_column_id = (
+                    select column_id 
+                    from sys.columns 
+                    where object_id = object_id('Idea')
+                    and name = 'Date'
+                    )
+
+                set @sql = N'alter table Idea drop constraint ' + @default
+                exec sp_executesql @sql
+
+                alter table Idea drop column Date;");
             Database.ExecuteNonQuery(@"alter table [Idea] drop column Contributer_id;");
             Database.ExecuteNonQuery(@"alter table [Idea] drop column Tag_id;");
             Database.ExecuteNonQuery(@"alter table [Idea] drop column Title;");

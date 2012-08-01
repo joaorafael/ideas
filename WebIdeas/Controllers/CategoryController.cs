@@ -10,5 +10,10 @@ namespace WebIdeas.Controllers
 
             return View();
         }
+
+        public ActionResult Details()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

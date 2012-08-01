@@ -1,5 +1,4 @@
-﻿@using System.Globalization
-@using WebIdeas.ViewModels
+﻿@using WebIdeas.ViewModels
 @{
     var contributers = ((IContributers) @Model).Contributers;
     var ideas = ((IIdeas)@Model).Ideas;
@@ -11,7 +10,9 @@
             <ol>
                 @foreach (var contributer in contributers)
                 {
-                    <li><a href="@Url.Action(@contributer.Id.ToString(CultureInfo.CurrentUICulture), "User")">@contributer.Name</a></li>
+                    <li>
+                        @Html.ActionLink(@contributer.Name, "Details", "Contributer", new { id = @contributer.Id }, null)
+                    </li>
                 }
             </ol>
         </div>
@@ -20,7 +21,9 @@
             <ol>
                 @foreach (var idea in ideas)
                 {
-                    <li><a href="@Url.Action(@idea.Id.ToString(CultureInfo.CurrentUICulture), "Idea")">@idea.Text</a></li>
+                    <li>
+                        @Html.ActionLink(@idea.Text, "Details", "Idea", new { id = @idea.Id }, null)
+                    </li>
                 }
             </ol>
         </div>

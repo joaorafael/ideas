@@ -25,6 +25,42 @@ namespace WebIdeas.Tests.Routes
         }
 
         [Fact]
+        public void RouteWithControllerWithActionNoId()
+        {
+            // Arrange
+            StubContext context = new StubContext("~/controller1/action2");
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+
+            // Act
+            RouteData routeData = routes.GetRouteData(context);
+
+            // Assert
+            Assert.NotNull(routeData);
+            Assert.Equal("controller1", routeData.Values["controller"]);
+            Assert.Equal("action2", routeData.Values["action"]);
+            Assert.Equal(UrlParameter.Optional, routeData.Values["id"]);
+        }
+
+//        [Fact]
+//        public void RouteWithControllerNoActionWithId()
+//        {
+//            // Arrange
+//            StubContext context = new StubContext("~/controller1/id2");
+//            RouteCollection routes = new RouteCollection();
+//            MvcApplication.RegisterRoutes(routes);
+//
+//            // Act
+//            RouteData routeData = routes.GetRouteData(context);
+//
+//            // Assert
+//            Assert.NotNull(routeData);
+//            Assert.Equal("controller1", routeData.Values["controller"]);
+//            Assert.Equal("Details", routeData.Values["action"]);
+//            Assert.Equal("id2", routeData.Values["id"]);
+//        }
+
+        [Fact]
         public void RouteWithControllerWithActionWithId()
         {
             // Arrange
@@ -40,24 +76,6 @@ namespace WebIdeas.Tests.Routes
             Assert.Equal("controller1", routeData.Values["controller"]);
             Assert.Equal("action2", routeData.Values["action"]);
             Assert.Equal("id3", routeData.Values["id"]);
-        }
-
-        [Fact]
-        public void RouteWithControllerNoActionWithId()
-        {
-            // Arrange
-            StubContext context = new StubContext("~/controller1/id2");
-            RouteCollection routes = new RouteCollection();
-            MvcApplication.RegisterRoutes(routes);
-
-            // Act
-            RouteData routeData = routes.GetRouteData(context);
-
-            // Assert
-            Assert.NotNull(routeData);
-            Assert.Equal("controller1", routeData.Values["controller"]);
-            Assert.Equal("Details", routeData.Values["action"]);
-            Assert.Equal("id2", routeData.Values["id"]);
         }
 
         [Fact]

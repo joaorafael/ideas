@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using WebIdeas.Models;
+using WebIdeas.ViewModels;
 using Xunit;
 
 namespace WebIdeas.Tests.Models
@@ -53,19 +55,49 @@ namespace WebIdeas.Tests.Models
         {
             var ideas1 = new List<Idea>
                             {
-                                new Idea {Text = "abc"}, 
-                                new Idea {Text = "def"}
+                                new Idea
+                                    {
+                                        Text = "abc", Title = "title", Date = new DateTime(2012,11,15),
+                                        Contributer = new Contributer{Id = 1, Name = "contributer"}, 
+                                        Tag = new Tag{Id = 1, Name = "tag"}
+                                    }, 
+                                new Idea
+                                    {
+                                        Text = "def", Title = "title2", Date = new DateTime(2011,09,15),
+                                        Contributer = new Contributer{Id = 2, Name = "contributer2"}, 
+                                        Tag = new Tag{Id = 2, Name = "tag2"}
+                                    }
                             };
 
             var ideas2 = new List<Idea>
                             {
-                                new Idea {Text = "abc"}, 
-                                new Idea {Text = "def"}
+                                new Idea
+                                    {
+                                        Text = "abc", Title = "title", Date = new DateTime(2012,11,15),
+                                        Contributer = new Contributer{Id = 1, Name = "contributer"}, 
+                                        Tag = new Tag{Id = 1, Name = "tag"}
+                                    }, 
+                                new Idea
+                                    {
+                                        Text = "def", Title = "title2", Date = new DateTime(2011,09,15),
+                                        Contributer = new Contributer{Id = 2, Name = "contributer2"}, 
+                                        Tag = new Tag{Id = 2, Name = "tag2"}
+                                    }
                             };
             var ideas3 = new List<Idea>
                             {
-                                new Idea {Text = "eee"}, 
-                                new Idea {Text = "def"}
+                                new Idea
+                                    {
+                                        Text = "abc", Title = "title", Date = new DateTime(2012,11,15),
+                                        Contributer = new Contributer{Id = 1, Name = "contributer"}, 
+                                        Tag = new Tag{Id = 1, Name = "tag"}
+                                    }, 
+                                new Idea
+                                    {
+                                        Text = "def", Title = "title2", Date = new DateTime(2011,09,15),
+                                        Contributer = new Contributer{Id = 2, Name = "contributer2"}, 
+                                        Tag = new Tag{Id = 2, Name = "tag6"}
+                                    }
                             };
 
             var model1 = new HomeIndexViewModel { Ideas = ideas1 };
@@ -114,7 +146,7 @@ namespace WebIdeas.Tests.Models
                                 new Idea {Text = "def"}
                             };
             var model1 = new HomeIndexViewModel { Tags = tags1, Contributers = contributers1, Ideas = ideas1 };
-            var model2 = new HomeIndexViewModel { Tags = tags2, Contributers = contributers2, Ideas = ideas2};
+            var model2 = new HomeIndexViewModel { Tags = tags2, Contributers = contributers2, Ideas = ideas2 };
 
             Assert.Equal(model1, model2);
         }

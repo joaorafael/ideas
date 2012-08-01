@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace WebIdeas.Models
+namespace WebIdeas.Helpers
 {
     public class ListHelpers
     {

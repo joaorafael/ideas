@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using NHibernate;
 using StructureMap;
 using WebIdeas.Infrastructure;
 using WebIdeas.Models;
+using WebIdeas.ViewModels;
 using Xunit;
 using WebIdeas.Controllers;
 
@@ -29,7 +31,6 @@ namespace WebIdeas.Tests.Controllers
                     var viewResult = Assert.IsType<ViewResult>(result);
                     Assert.Empty(viewResult.ViewName);
                 }
-
             }
 
             [Fact]
@@ -51,13 +52,14 @@ namespace WebIdeas.Tests.Controllers
                                              new Tag {Id = 4, Name = "Cadeiras"},
                                              new Tag {Id = 5, Name = "Portáteis"}
                                          };
+                var now = DateTime.Now;
                 var ideas = new List<Idea>
                                          {
-                                             new Idea {Id = 1, Text = "Ideia marada"},
-                                             new Idea {Id = 2, Text = "Olha que boa ideia"},
-                                             new Idea {Id = 3, Text = "Não sei porquê mas parece-me boa ideia"},
+                                             new Idea {Id = 1, Text = "Ideia marada", Date = now},
+                                             new Idea {Id = 2, Text = "Olha que boa ideia", Date = now},
+                                             new Idea {Id = 3, Text = "Não sei porquê mas parece-me boa ideia", Date = now},
                                          };
-                var lastIdea = new Idea {Id = 3, Text = "Não sei porquê mas parece-me boa ideia"};
+                var lastIdea = new Idea { Id = 3, Text = "Não sei porquê mas parece-me boa ideia", Date = now };
 
                 var vm = new HomeIndexViewModel { Tags = tags, Contributers = contributers, Ideas = ideas, LastIdea = lastIdea };
 
@@ -80,7 +82,6 @@ namespace WebIdeas.Tests.Controllers
                     // Assert
                     Assert.IsType<ViewResult>(result);
                     var viewResult = (ViewResult) result;
-
 
                     Assert.Equal("ViewBag.Message - Home", viewResult.ViewBag.Message);
                     Assert.Equal(vm, viewResult.Model);
@@ -124,6 +125,5 @@ namespace WebIdeas.Tests.Controllers
             }
 
         }
-
     }
 }

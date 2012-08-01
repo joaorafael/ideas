@@ -1,4 +1,6 @@
-namespace WebIdeas.Models
+using WebIdeas.Models;
+
+namespace WebIdeas.ViewModels
 {
     public interface ILastIdea
     {

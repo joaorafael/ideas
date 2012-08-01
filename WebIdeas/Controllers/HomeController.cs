@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using NHibernate.Linq;
 using System.Linq;
 using WebIdeas.Models;
+using WebIdeas.ViewModels;
 
 namespace WebIdeas.Controllers
 {

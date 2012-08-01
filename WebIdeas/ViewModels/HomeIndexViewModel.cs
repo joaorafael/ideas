@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using WebIdeas.Helpers;
+using WebIdeas.Models;
 
-namespace WebIdeas.Models
+namespace WebIdeas.ViewModels
 {
     public class HomeIndexViewModel : ITags, IContributers, IIdeas, ILastIdea
     {

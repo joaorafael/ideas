@@ -1,27 +1,28 @@
 ﻿@using System.Globalization
-@using WebIdeas.Models
 @using WebIdeas.ViewModels
 @{
     var contributers = ((IContributers) @Model).Contributers;
     var ideas = ((IIdeas)@Model).Ideas;
 }
-<div id="tops" class="centered">
-    <div id="contribuidores">
-        <h1>Top 5 Contribuidores</h1>
-        <ol>
-        @foreach (var contributer in contributers)
-        {
-            <li><a href="@Url.Action(@contributer.Id.ToString(CultureInfo.CurrentUICulture), "User")">@contributer.Name</a></li>
-        }
-        </ol>
-    </div>
-    <div id="ideias">
-        <h1>Top 5 Ideias</h1>
-        <ol>
-        @foreach (var idea in ideas)
-        {
-            <li><a href="@Url.Action(@idea.Id.ToString(CultureInfo.CurrentUICulture), "Idea")">@idea.Text</a></li>
-        }
-        </ol>
+<div id="tops">
+    <div class="centered">
+        <div id="contribuidores">
+            <h1>Top 5 Contribuidores</h1>
+            <ol>
+                @foreach (var contributer in contributers)
+                {
+                    <li><a href="@Url.Action(@contributer.Id.ToString(CultureInfo.CurrentUICulture), "User")">@contributer.Name</a></li>
+                }
+            </ol>
+        </div>
+        <div id="ideias">
+            <h1>Top 5 Ideias</h1>
+            <ol>
+                @foreach (var idea in ideas)
+                {
+                    <li><a href="@Url.Action(@idea.Id.ToString(CultureInfo.CurrentUICulture), "Idea")">@idea.Text</a></li>
+                }
+            </ol>
+        </div>
     </div>
 </div>

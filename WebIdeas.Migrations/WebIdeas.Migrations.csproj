@@ -84,6 +84,7 @@
     <Content Include="migratordotnet-0.8.0\lib\System.Data.SqlServerCe.dll" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="build.bat" />
     <None Include="build.proj" />
     <None Include="migratordotnet-0.8.0\doc\example\example-msbuild.proj" />
     <None Include="migratordotnet-0.8.0\doc\example\example-nant.build" />

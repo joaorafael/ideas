@@ -22,7 +22,7 @@
 <div id="destaque">
     <div class="centered">
         @Html.Partial("_Categories")
-        <a id="ultima" href="@Url.Action(@lastIdea.Id.ToString(CultureInfo.CurrentUICulture), "Idea")">
+        <a id="ultima" href="@Url.Action("Index", "Idea")">
             <h1>@lastIdea.Title</h1>
             <h2>Categoria: @lastIdea.Tag.Name | @lastIdea.Date.ToShortDateString()</h2>
             <p>

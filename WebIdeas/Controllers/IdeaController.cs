@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using NHibernate.Linq;
+using WebIdeas.Models;
 
 namespace WebIdeas.Controllers
 {
@@ -9,6 +12,12 @@ namespace WebIdeas.Controllers
             ViewBag.Message = "ViewBag.Message - Idea";
 
             return View();
+        }
+
+        public ActionResult Details(int id)
+        {
+            var idea = (from item in UnitOfWork.Session.Query<Idea>() where item.Id == id select item).First();
+            return View(idea);
         }
     }
 }

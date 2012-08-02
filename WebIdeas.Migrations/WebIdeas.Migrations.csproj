@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="drop-all-data.sql" />
     <Content Include="delete-all-data.sql" />
     <Content Include="migratordotnet-0.8.0\doc\CHANGES.txt" />
     <Content Include="migratordotnet-0.8.0\doc\example\migrations\migrations.dll" />
@@ -87,6 +88,7 @@
   <ItemGroup>
     <None Include="build.bat" />
     <None Include="build.proj" />
+    <None Include="drop.bat" />
     <None Include="delete.bat" />
     <None Include="migratordotnet-0.8.0\doc\example\example-msbuild.proj" />
     <None Include="migratordotnet-0.8.0\doc\example\example-nant.build" />

@@ -1,7 +1,8 @@
+Home - done
 Account
-Category
+Contributer
 Help
 Idea
 Stats
 Suggest
-User
+Tag

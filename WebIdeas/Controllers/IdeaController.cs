@@ -16,8 +16,19 @@ namespace WebIdeas.Controllers
 
         public ActionResult Details(int id)
         {
-            var idea = (from item in UnitOfWork.Session.Query<Idea>() where item.Id == id select item).First();
+            var idea = UnitOfWork.Session.Get<Idea>(id);
             return View(idea);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var idea = UnitOfWork.Session.Get<Idea>(id);
+            return View(idea);
+        }
+
+        public ActionResult New()
+        {
+            return View();
         }
     }
 }

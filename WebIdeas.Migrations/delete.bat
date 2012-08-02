@@ -1,0 +1,1 @@
+@osql -E -S .\sqlexpress -d master -i delete-all-data.sql

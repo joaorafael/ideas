@@ -88,6 +88,34 @@ namespace WebIdeas.Tests.Controllers
                 }
             }
 
+            [Fact]
+            public void SetsViewModel_WhenNoDataStillHaveAllSetWithNoData()
+            {
+                // Arrange
+                IoC.Initialize();
+
+                using (var unitOfWork = new UnitOfWork(ObjectFactory.GetInstance<ISessionFactory>()))
+                {
+                    var controller = new HomeController { UnitOfWork = unitOfWork };
+
+                    // Act
+                    var result = controller.Index();
+
+                    // Assert
+                    Assert.IsType<ViewResult>(result);
+                    var viewResult = (ViewResult)result;
+                    var vm = (HomeIndexViewModel)viewResult.Model;
+
+                    Assert.NotNull(vm.Contributers);
+                    Assert.NotNull(vm.Ideas);
+                    Assert.NotNull(vm.Tags);
+                    Assert.Equal(0, vm.Contributers.Count);
+                    Assert.Equal(0, vm.Ideas.Count);
+                    Assert.Equal(0, vm.Tags.Count);
+                    Assert.Null(vm.LastIdea);
+                }
+            }
+
             private void CreateTopIdeas(UnitOfWork unitOfWork)
             {
                 var idea1 = new Idea {Text = "Ideia marada"};

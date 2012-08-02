@@ -1,9 +1,7 @@
-﻿@using System.Globalization
-@model WebIdeas.ViewModels.HomeIndexViewModel
+﻿@model WebIdeas.ViewModels.HomeIndexViewModel
 
 @{
     ViewBag.Title = "Início";
-    var lastIdea = Model.LastIdea;
 }
 
 @section Nav
@@ -14,22 +12,42 @@
     <div class="centered">
         <img src="/Content/images/tagInicio.png" alt="Submete a tua ideia" title="Submete a tua ideia" />
         <div class="submeter">
-            @Html.ActionLink("Submeter Ideia", "Index", "User")
+            @Html.ActionLink("Submeter Ideia", "New", "Idea")
         </div>
     </div>
 </div>
 <div class="decoration"></div>
 <div id="destaque">
     <div class="centered">
-        @Html.Partial("_Categories")
-        <a id="ultima" href="@Url.Action("Index", "Idea")">
-            <h1>@lastIdea.Title</h1>
-            <h2>Categoria: @lastIdea.Tag.Name | @lastIdea.Date.ToShortDateString()</h2>
-            <p>
-                @lastIdea.Text
-            </p>
-            <h2>Submetida por: @lastIdea.Contributer.Name</h2>
-        </a>
+        @if (Model.Tags.Count > 0)
+        {
+            @Html.Partial("_Tags")
+        }
+        @if (Model.LastIdea != null)
+        {
+            <a class="ultima" href="@Url.Action("Index", "Idea")">
+                <h1>@Model.LastIdea.Title</h1>
+                <h2>Categoria: @Model.LastIdea.Tag.Name | @Model.LastIdea.Date.ToShortDateString()</h2>
+                <p>
+                    @Model.LastIdea.Text
+                </p>
+                <h2>Submetida por: @Model.LastIdea.Contributer.Name</h2>
+            </a>
+        }
+        else
+        {
+            <div class="ultima">
+                <a href="@Url.Action("New", "Idea")">
+                    <h1>Ideas precisam-se</h1>
+                    <p>
+                        Ainda não temos ideas, queres ser o primeiro?
+                    </p>
+                </a>
+            </div>
+        }
     </div>
 </div>
-@Html.Partial("_Tops")
+ @if (Model.Ideas.Count > 0)
+{
+    @Html.Partial("_Tops")
+}

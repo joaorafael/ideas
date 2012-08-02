@@ -2,15 +2,15 @@
     var selected = @Model;
     var home = selected.Equals("Home") ? "class=\"selected\"" : "";
     var idea = selected.Equals("Idea") ? "class=\"selected\"" : "";
-    var user = selected.Equals("User") ? "class=\"selected\"" : "";
-    var category = selected.Equals("Category") ? " class=\"selected\"" : "";
+    var user = selected.Equals("Contributer") ? "class=\"selected\"" : "";
+    var tag = selected.Equals("Tag") ? " class=\"selected\"" : "";
     var stats = selected.Equals("Stats") ? " class=\"selected\"" : "";
 }
 
 <ul id="nav">
     <li @Html.Raw(home)>@Html.ActionLink("início", "Index", "Home")</li>
     <li @Html.Raw(idea)>@Html.ActionLink("driving ideas", "Index", "Idea")</li>
-    <li @Html.Raw(user)>@Html.ActionLink("as minhas ideias", "Index", "User")</li>
-    <li @Html.Raw(category)>@Html.ActionLink("categorias", "Index", "Category")</li>
+    <li @Html.Raw(user)>@Html.ActionLink("as minhas ideias", "Index", "Contributer")</li>
+    <li @Html.Raw(tag)>@Html.ActionLink("categorias", "Index", "Tag")</li>
     <li @Html.Raw(stats)>@Html.ActionLink("estatísticas", "Index", "Stats")</li>
 </ul>

@@ -150,5 +150,6 @@ namespace WebIdeas.Tests.Models
 
             Assert.Equal(model1, model2);
         }
+
     }
 }

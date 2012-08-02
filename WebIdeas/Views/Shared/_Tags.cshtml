@@ -1,0 +1,13 @@
+﻿@using WebIdeas.ViewModels
+@{
+    var tags = ((ITags)@Model).Tags;
+}
+
+<div id="categorias">
+    <ul>
+        @foreach (var tag in tags)
+        {
+            <li>@Html.ActionLink(@tag.Name, "Details", "Tag")</li>
+        }
+    </ul>
+</div>

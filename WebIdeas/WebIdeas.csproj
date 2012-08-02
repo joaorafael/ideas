@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\TagController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContributerController.cs" />
     <Compile Include="Controllers\SuggestController.cs" />
@@ -83,7 +83,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IdeaController.cs" />
     <Compile Include="Controllers\StatsController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +172,11 @@
     <Content Include="Views\Help\Index.cshtml" />
     <Content Include="Views\Suggest\Index.cshtml" />
     <Content Include="Views\Idea\Details.cshtml" />
+    <Content Include="Views\Tag\Details.cshtml" />
+    <Content Include="Views\Idea\Edit.cshtml" />
+    <Content Include="Views\Idea\New.cshtml" />
+    <Content Include="Views\Contributer\Index.cshtml" />
+    <Content Include="Views\Contributer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -184,10 +188,7 @@
     <Content Include="Views\Stats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Tag\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Idea\Index.cshtml" />
@@ -196,7 +197,7 @@
     <Content Include="Views\Shared\_Tops.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Categories.cshtml" />
+    <Content Include="Views\Shared\_Tags.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Nav.cshtml" />
